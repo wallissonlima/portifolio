@@ -47,14 +47,7 @@ export function Header() {
                     Inicio
                   </NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="/about"
-                    className={location.pathname === "/about" ? "active" : ""}
-                  >
-                    Sobre
-                  </NavLink>
-                </NavItem>
+
                 <NavItem>
                   <NavLink
                     href="/skills"
@@ -87,6 +80,14 @@ export function Header() {
                     }
                   >
                     Portfólio
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href="/about"
+                    className={location.pathname === "/about" ? "active" : ""}
+                  >
+                    Sobre
                   </NavLink>
                 </NavItem>
               </Nav>

@@ -16,16 +16,10 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
 export function Header() {
-  // const navigate = useNavigate();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-
-  // const handleLogout = () => {
-  //   localStorage.removeItem("access_token");
-  //   navigate("/");
-  // };
 
   return (
     <>
@@ -45,6 +39,14 @@ export function Header() {
                     className={location.pathname === "/" ? "active" : ""}
                   >
                     Inicio
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href="/about"
+                    className={location.pathname === "/about" ? "active" : ""}
+                  >
+                    Sobre
                   </NavLink>
                 </NavItem>
 
@@ -74,7 +76,7 @@ export function Header() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="/protfolio"
+                    href="/portfolio"
                     className={
                       location.pathname === "/protfolio" ? "active" : ""
                     }
@@ -82,16 +84,7 @@ export function Header() {
                     Portfólio
                   </NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="/about"
-                    className={location.pathname === "/about" ? "active" : ""}
-                  >
-                    Sobre
-                  </NavLink>
-                </NavItem>
               </Nav>
-              {/* <SignOut onClick={handleLogout} size={25} /> */}
             </div>
           </Collapse>
         </Navbar>

@@ -78,22 +78,30 @@ export const About = () => {
             </Animate>
           </CustomBody>
           <Custom>
-            <CustomIconCicular>
-              <CustomIcon>
-                <div>
-                  <FaDev size={60} color="#ffffff" />
-                </div>
-                <div>
-                  <DiAndroid size={60} color="#ffffff" />
-                </div>
-                <div>
-                  <FaDatabase size={60} color="#ffffff" />
-                </div>
-                <div>
-                  <DiApple size={60} color="#ffffff" />
-                </div>
-              </CustomIcon>
-            </CustomIconCicular>
+            <Animate
+              play
+              duration={1.5}
+              delay={1}
+              start={{ transform: "translateX(600px)" }}
+              end={{ transform: "translatex(0px)" }}
+            >
+              <CustomIconCicular>
+                <CustomIcon>
+                  <div>
+                    <FaDev size={60} color="#ffffff" />
+                  </div>
+                  <div>
+                    <DiAndroid size={60} color="#ffffff" />
+                  </div>
+                  <div>
+                    <FaDatabase size={60} color="#ffffff" />
+                  </div>
+                  <div>
+                    <DiApple size={60} color="#ffffff" />
+                  </div>
+                </CustomIcon>
+              </CustomIconCicular>
+            </Animate>
           </Custom>
         </ContenteBody>
       </Context>

@@ -66,22 +66,22 @@ export function Header() {
                     Resumo
                   </NavLink>
                 </NavItem>
+                {/* <NavItem>
+                  <NavLink
+                    href="/portfolio"
+                    className={
+                      location.pathname === "/portfolio" ? "active" : ""
+                    }
+                  >
+                    Portfólio
+                  </NavLink>
+                </NavItem> */}
                 <NavItem>
                   <NavLink
                     href="/contact"
                     className={location.pathname === "/contact" ? "active" : ""}
                   >
                     Contato
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="/portfolio"
-                    className={
-                      location.pathname === "/protfolio" ? "active" : ""
-                    }
-                  >
-                    Portfólio
                   </NavLink>
                 </NavItem>
               </Nav>

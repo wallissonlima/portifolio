@@ -55,7 +55,7 @@ export const Resume = () => {
                     color: "#fff",
                     border: "1.5px solid #000",
                   }}
-                  date="2020 - Present"
+                  date="2020 - 2024"
                   icon={<MdWork />}
                   iconStyle={{
                     background: "#e0e0e0",

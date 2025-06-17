@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { Header } from "../../components/Header";
 import { PageHeader } from "../../components/pageHeader";
-import { Context, CustomBody, CustomH3 } from "./styles";
+import { Context, CustomBody, CustomData, CustomH3 } from "./styles";
 import { ResumeData } from "../../util/resume";
 import { MdWork } from "react-icons/md";
 
@@ -28,7 +28,6 @@ export const Resume = () => {
                     color: "#fff",
                     border: "1.5px solid #000",
                   }}
-                  date="2020 - Present"
                   icon={<MdWork />}
                   iconStyle={{
                     background: "#e0e0e0",
@@ -40,6 +39,9 @@ export const Resume = () => {
                     <h4>{item.subTitle}</h4>
                   </CustomH3>
                   <p>{item.Description}</p>
+                  <CustomData>
+                    <p>{item.data}</p>
+                  </CustomData>
                 </VerticalTimelineElement>
               ))}
             </VerticalTimeline>
@@ -55,7 +57,6 @@ export const Resume = () => {
                     color: "#fff",
                     border: "1.5px solid #000",
                   }}
-                  date="2020 - 2024"
                   icon={<MdWork />}
                   iconStyle={{
                     background: "#e0e0e0",
@@ -67,6 +68,9 @@ export const Resume = () => {
                     <h4>{item.subTitle}</h4>
                   </CustomH3>
                   <p>{item.Description}</p>
+                  <CustomData>
+                    <p>{item.data}</p>
+                  </CustomData>
                 </VerticalTimelineElement>
               ))}
             </VerticalTimeline>

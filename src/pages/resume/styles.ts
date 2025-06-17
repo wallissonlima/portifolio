@@ -72,3 +72,10 @@ export const CustomH3 = styled.div`
     font-size: 18px;
   }
 `;
+
+export const CustomData = styled.div`
+  color: white;
+  p {
+    font-size: 13px;
+  }
+`;

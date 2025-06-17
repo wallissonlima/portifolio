@@ -12,7 +12,7 @@ export const SkillsData = [
       },
       {
         skillName: "VUE JS",
-        percentage: "80",
+        percentage: "70",
       },
     ],
   },

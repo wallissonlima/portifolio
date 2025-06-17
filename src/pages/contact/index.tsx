@@ -3,9 +3,36 @@ import { Header } from "../../components/Header";
 import { PageHeader } from "../../components/pageHeader";
 import { Context, CustomButton, CustomDiv, CustomForm } from "./styles";
 import { Animate } from "react-simple-animate";
-import { Button, Input, Label } from "reactstrap";
+import { Input, Label } from "reactstrap";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 
 export const Contact = () => {
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tlr7cir", // do EmailJS
+        "template_g3j0ghs", // do EmailJS
+        form.current,
+        "ZJzcmHfv8vdB7aFHV" // public key
+      )
+      .then(
+        (result) => {
+          alert("Mensagem enviada com sucesso!");
+          console.log(result.text);
+          form.current.reset(); // limpa os campos
+        },
+        (error) => {
+          alert("Erro ao enviar. Tente novamente.");
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <>
       <Header />
@@ -35,7 +62,7 @@ export const Contact = () => {
             }}
             end={{ transform: "translateX(0px)" }}
           >
-            <CustomForm>
+            <CustomForm ref={form} onSubmit={sendEmail}>
               <CustomDiv>
                 <div>
                   <Input
@@ -65,7 +92,7 @@ export const Contact = () => {
                   <Label className="descricaoLabel">Descrição</Label>
                 </div>
               </CustomDiv>
-              <CustomButton>Enviar</CustomButton>
+              <CustomButton type="submit">Enviar</CustomButton>
             </CustomForm>
           </Animate>
         </div>

@@ -8,7 +8,7 @@ export const Context = styled.div`
   padding: 1rem;
 `;
 
-export const CustomForm = styled.div`
+export const CustomForm = styled.form`
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
